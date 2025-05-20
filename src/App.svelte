@@ -9,7 +9,7 @@
 
     switch (tipo) {
       case 'saltar':
-        boton.style.animation = 'saltar 0.5s';
+        boton.style.animation = 'saltar 0.5s';  
         break;
       case 'flotar':
         boton.style.transform = 'translateY(-5px)';
@@ -123,7 +123,7 @@
   .modal {
     position: fixed;
     top: 0; left: 0; right: 0; bottom: 0;
-    background: rgba(0,0,0,0.7);
+    background: rgba(94, 88, 88, 0.7);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -131,18 +131,12 @@
   }
 
   .modal-contenido {
-    background: black;
+    background:rgb(228, 151, 153);
     padding: 2rem;
     border-radius: 10px;
     text-align: center;
     max-width: 400px;
     width: 90%;
-    animation: aparecer 0.3s ease-out;
-  }
-
-  @keyframes aparecer {
-    from { opacity: 0; transform: scale(0.9); }
-    to { opacity: 1; transform: scale(1); }
   }
 
   .boton-cerrar {
@@ -164,7 +158,7 @@
 
   .scroll-final {
     height: 100vh;
-    background: linear-gradient(to bottom,  #ffffff,  #1a3a32);
+    background: linear-gradient(to bottom,rgb(255, 255, 255),rgb(0, 0, 0));
     color: white;
     text-align: center;
     padding-top: 120vh;
@@ -173,7 +167,7 @@
 </style>
 
 <div class="app-container">
-  <header>svelte &gt; tailwind </header>
+  <header>svelte </header>
 
   <div class="main-content">
     <div class="contenedor-botones">
@@ -223,7 +217,7 @@
     <div class="modal">
       <div class="modal-contenido">
         <h3>¡Qué bonito modal, no?</h3>
-        <p>Y todo esto hecho con Svelte puro, sin necesidad de Tailwind 😉</p>
+        <p>Y todo esto hecho con Svelte puro 😉</p>
         <button class="boton-cerrar" on:click={() => mostrarModal = false}>
           Cerrar
         </button>
